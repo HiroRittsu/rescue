@@ -88,8 +88,7 @@ public class SamplePathPlanning extends PathPlanning {
 
 	@Override
 	public PathPlanning calc() {
-		
-		System.out.println("debug");
+
 		List<EntityID> open = new LinkedList<>();
 		Map<EntityID, EntityID> ancestors = new HashMap<>();
 		open.add(this.from);
