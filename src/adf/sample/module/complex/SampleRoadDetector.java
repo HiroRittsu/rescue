@@ -171,7 +171,7 @@ public class SampleRoadDetector extends RoadDetector {
 
 	@Override
 	public RoadDetector calc() {
-		
+
 		EntityID position;
 		/*
 		 * if (this.result == null) { EntityID positionID =
@@ -193,17 +193,30 @@ public class SampleRoadDetector extends RoadDetector {
 		 */
 
 		System.out.println(this.agentInfo.getPosition());
-		
+
 		position = this.agentInfo.getPosition();
-		
-		
-		
+
+		StandardEntity entity = this.worldInfo.getEntity(position);
+
+		List<EntityID> road_neightbours = null;
+
+		if (entity instanceof Road) {
+
+			System.out.println("road now");
+			road_neightbours = ((Road) entity).getNeighbours();
+			System.out.println(road_neightbours);
+
+			for (EntityID next : road_neightbours) {
+
+				//if( instanceof Road) target = next;
+				
+			}
+		}
+
 		this.pathPlanning.setFrom(this.agentInfo.getPosition());
-		System.out.println(targetAreas);
+		System.out.println();
 		this.pathPlanning.setDestination(this.targetAreas);
-		
-		
-		
+
 		return this;
 
 	}
