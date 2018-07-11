@@ -208,8 +208,8 @@ public class SampleRoadDetector extends RoadDetector {
 
 			for (EntityID next : road_neightbours) {
 
-				//if( instanceof Road) target = next;
-				
+				// if( instanceof Road) target = next;
+
 			}
 		}
 
